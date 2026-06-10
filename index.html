@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuizFlow UI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="screen welcome-screen" aria-label="Quiz welcome screen">
+        <header class="topbar">
+          <a class="logo" href="#">QuizFlow</a>
+          <button class="icon-button" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </header>
+
+        <div class="welcome-grid">
+          <article class="intro-panel">
+            <p class="eyebrow">Daily challenge</p>
+            <h1>Test your knowledge in a clean, focused quiz.</h1>
+            <p class="intro-copy">
+              Pick a topic, start the round, and see a polished result summary
+              when you finish.
+            </p>
+
+            <div class="action-row">
+              <a class="primary-button" href="#question">Start Quiz</a>
+              <label class="select-wrap">
+                <span>Quiz Topic</span>
+                <select aria-label="Quiz topic">
+                  <option>General</option>
+                  <option>Science</option>
+                  <option>History</option>
+                  <option>Technology</option>
+                </select>
+              </label>
+            </div>
+          </article>
+
+          <aside class="hero-card" aria-label="Quiz preview image">
+            <div class="orb orb-one"></div>
+            <div class="orb orb-two"></div>
+            <div class="score-chip">95%</div>
+            <div class="question-stack">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <span class="flow-arrow" aria-hidden="true"></span>
+
+      <section class="screen question-screen" id="question" aria-label="Question screen">
+        <header class="quiz-header">
+          <a class="logo compact" href="#">QuizFlow</a>
+          <div class="stat-row">
+            <span class="stat-pill">Score 08</span>
+            <span class="stat-pill">01:24</span>
+          </div>
+        </header>
+
+        <article class="question-card">
+          <p class="progress-label">Question 4 of 10</p>
+          <h2>Which planet is known as the Red Planet?</h2>
+        </article>
+
+        <div class="options" role="list" aria-label="Answer options">
+          <button class="option" type="button">Venus</button>
+          <button class="option active" type="button">Mars</button>
+          <button class="option" type="button">Jupiter</button>
+          <button class="option" type="button">Mercury</button>
+        </div>
+
+        <article class="solution-card">
+          <div>
+            <span class="solution-status">Correct answer</span>
+            <h3>Mars has iron-rich dust on its surface.</h3>
+          </div>
+          <p>
+            That dust gives the planet its reddish color, which is why it is
+            commonly called the Red Planet.
+          </p>
+        </article>
+      </section>
+
+      <span class="flow-arrow" aria-hidden="true"></span>
+
+      <section class="screen result-screen" aria-label="Quiz result screen">
+        <article class="result-hero">
+          <div class="badge-ring">
+            <span>82%</span>
+          </div>
+          <h2>Great score</h2>
+          <p>You answered most questions correctly. Keep the streak going.</p>
+        </article>
+
+        <article class="summary-card">
+          <div>
+            <span class="summary-label">Final score</span>
+            <strong>8 / 10</strong>
+          </div>
+          <div>
+            <span class="summary-label">Accuracy</span>
+            <strong>82%</strong>
+          </div>
+          <div>
+            <span class="summary-label">Time</span>
+            <strong>04:18</strong>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <header>
+            <h3>Question Review</h3>
+            <span>Scrollable answers</span>
+          </header>
+          <div class="review-list">
+            <p><strong>1.</strong> Correct: Mars is the Red Planet.</p>
+            <p><strong>2.</strong> Correct: HTML structures web content.</p>
+            <p><strong>3.</strong> Missed: CSS controls presentation.</p>
+            <p><strong>4.</strong> Correct: The Pacific is the largest ocean.</p>
+            <p><strong>5.</strong> Correct: JavaScript adds interactivity.</p>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
